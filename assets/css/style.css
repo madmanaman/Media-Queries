@@ -1,0 +1,249 @@
+*{
+    padding:0;
+    margin: 0;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-areas:
+    "aside    header       header "
+    "aside     productos    productos"
+    "footer    productos    productos"
+    "footer    pag   pag"
+    ;
+    grid-template-columns: 15% auto;
+    grid-template-rows:13vh 74vh 3vh 10vh
+}
+
+/*header*/
+header{
+    grid-area: header;
+    text-align: center;
+    background-color: grey;
+    padding: 1rem 2rem;
+}
+
+/*paginador*/
+.paginador{
+    grid-area: pag;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+
+/* aside */
+.aside {
+    background-color: rgb(22, 154, 243);
+    grid-area: aside;
+    color: white;
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+}
+
+.name {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+.name i{
+    padding-right: 1rem;
+}
+.menu ul{
+    list-style: none;
+    text-align: center; 
+}
+
+.hamb{
+    display: none;
+}
+
+/* productos*/
+.items {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr)  
+}
+
+.productos {
+    background-color: white;
+    grid-area: productos;
+    overflow-y: auto;
+}
+
+
+.sku{
+    background-color: white;
+    margin: 1rem;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgb(151, 146, 146); 
+    box-shadow: 2px 4px 4px grey;  
+}
+
+
+.sku img{
+    height: 200px;
+}
+
+.boton {
+    background-color:rgb(39, 41, 196) ;
+    width: 8rem;
+    height: 2rem;
+    color: aliceblue;
+}
+
+h3, button{
+    margin-bottom: 1rem;
+}
+
+button:hover{
+    background-color: rgb(27, 87, 74);
+}
+
+/*footer*/
+.footer {
+    background-color: rgb(8, 106, 172);
+    grid-area: footer;
+    text-align: center;
+    color: white;
+}
+
+.icon{
+    padding:5px ;
+}
+
+
+@media (max-width: 992px){
+    .contenedor {
+        display: grid;
+        grid-template-areas:
+        "aside      aside"
+        "header     productos"
+        "header     pag"
+        "footer     footer";
+        grid-template-columns: 20% auto;
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .items {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(2, 1fr)  
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        padding: 0 0 0 1rem ;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu ul{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .menu li{
+        padding: 0 2rem;
+    }
+
+    header{
+        padding: 0 1rem;
+    }
+
+    }
+
+@media (max-width: 992px){
+    .contenedor {
+        display: grid;
+        grid-template-areas:
+        "aside      aside"
+        "header     productos"
+        "header     pag"
+        "footer     footer";
+        grid-template-columns: 20% auto;
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .items {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(2, 1fr)  
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        padding: 0 0 0 1rem ;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu ul{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .menu li{
+        padding: 0 2rem;
+    }
+}   
+
+@media (max-width: 576px){
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .items {
+        display: flex;
+        flex-direction: column; 
+    }
+    
+    .menu {
+        display: flex;
+        flex-direction: row;
+        padding: 0 0 0 1rem ;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .menu ul{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .menu li{
+        padding: 0 2rem;
+    }
+
+    .lista{
+        display: none;
+    }
+
+    .hamb{
+        display:block;
+        padding-right: 1rem;
+    }
+    header{
+        padding: 0 1rem 10px 1rem
+    }
+}    
+
+
+
+
